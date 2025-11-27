@@ -2,6 +2,68 @@ body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   background-color: white;
-  color: white;
+  color: ##1a202c;
   overflow-x: hidden;
+}
+
+.main-header {
+  background-color: #2b2b2b;
+  color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+  height: 80px;
+  min-height: 80px; 
+}
+
+.logo {
+  width: auto;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo img {
+  max-width: 300px;
+  height: auto;
+  filter: brightness(0) invert(1);
+}
+
+.header-nav {
+  margin-left: auto;
+  margin-right: 20px; 
+}
+
+.header-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; 
+}
+
+.header-nav ul li {
+  margin-left: 30px;
+}
+
+.header-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 1.5rem;
+  transition: all 0.2s ease-in-out;
+  letter-spacing: 0.3px;
+}
+
+.header-nav a:hover {
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
 }
