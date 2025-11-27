@@ -2,10 +2,14 @@ body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   background-color: white;
-  color: ##1a202c;
+  color: #1a202c;
   overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
+/*HEADER*/
 .main-header {
   background-color: #2b2b2b;
   color: #fff;
@@ -66,4 +70,76 @@ body {
   background-color: white;
   color: black;
   box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
+}
+
+/*FOOTER*/
+.footer {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 40px 20px 20px;
+  margin-top: auto;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.footer-section h3 {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-section a:hover {
+  color: white;
+}
+
+.footer-contact {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  margin-top: 30px;
+  text-align: center;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+/*MAIN*/
+main {
+  flex: 1;
+  padding-top: 100px;
 }
