@@ -185,9 +185,12 @@
 
 	</body>
 	<script>
-	  function animateCards() {
-	    const cards = document.querySelectorAll('.step-card');
+	  function animateAllElements() {
+	    const stepCards = document.querySelectorAll('.step-card');
 	    const materialCards = document.querySelectorAll('.material-card');
+	    const contactItems = document.querySelectorAll('.contact-item');
+	    const mapContainer = document.querySelector('.map-container');
+	    
 	    const observer = new IntersectionObserver((entries) => {
 	      entries.forEach(entry => {
 	        if (entry.isIntersecting) {
@@ -196,14 +199,21 @@
 	      });
 	    }, { threshold: 0.3 });
 
-	    cards.forEach(card => {
+	    stepCards.forEach(card => {
 	      observer.observe(card);
 	    });
 
-	    materialCards.forEach((card, index) => {
-	      card.style.transitionDelay = `${0.2 + index * 0.2}s`;
+	    materialCards.forEach(card => {
 	      observer.observe(card);
 	    });
+
+	    contactItems.forEach(item => {
+	      observer.observe(item);
+	    });
+
+	    if (mapContainer) {
+	      observer.observe(mapContainer);
+	    }
 	  }
 
 	  function animateSections() {
@@ -292,7 +302,7 @@
 	  document.head.appendChild(style);
 
 	  document.addEventListener('DOMContentLoaded', function() {
-	    animateCards();
+	    animateAllElements();
 	    animateSections();
 	    
 	    const emailElement = document.querySelector('a[href="mailto:itct@rguk.ru"]');
@@ -303,12 +313,12 @@
 	      });
 	    }
 	    const emailPriemElement = document.querySelector('a[href="mailto:priem@rguk.ru"]');
-		if (emailPriemElement) {
-		  emailPriemElement.addEventListener('click', function(e) {
-		    e.preventDefault();
-		    copyToClipboard('priem@rguk.ru');
-		  });
-		}
+	    if (emailPriemElement) {
+	      emailPriemElement.addEventListener('click', function(e) {
+	        e.preventDefault();
+	        copyToClipboard('priem@rguk.ru');
+	      });
+	    }
 	    const phoneElement = document.querySelector('a[href="tel:+74958110101"]');
 	    if (phoneElement) {
 	      phoneElement.addEventListener('click', function(e) {

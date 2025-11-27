@@ -244,10 +244,6 @@ body {
   transform: translateX(0);
 }
 
-.step-card:nth-child(1) { transition-delay: 0.1s; }
-.step-card:nth-child(2) { transition-delay: 0.3s; }
-.step-card:nth-child(3) { transition-delay: 0.5s; }
-
 .step-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
@@ -524,4 +520,41 @@ body {
   .contact-item {
     padding: 20px;
   }
+}
+
+.step-card, .material-card, .contact-item, .map-container {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.step-card.visible, .material-card.visible, 
+.contact-item.visible, .map-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.step-card:nth-child(1) { transition-delay: 0.1s; }
+.step-card:nth-child(2) { transition-delay: 0.3s; }
+.step-card:nth-child(3) { transition-delay: 0.5s; }
+
+.material-card:nth-child(1) { transition-delay: 0.2s; }
+.material-card:nth-child(2) { transition-delay: 0.4s; }
+.material-card:nth-child(3) { transition-delay: 0.6s; }
+
+.contact-item:nth-child(1) { transition-delay: 0.2s; }
+.contact-item:nth-child(2) { transition-delay: 0.4s; }
+.contact-item:nth-child(3) { transition-delay: 0.6s; }
+
+.map-container { transition-delay: 0.8s; }
+
+.address-text {
+  color: #2b6cb0;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.address-text:hover {
+  color: #1a4d80;
+  text-decoration: underline;
 }
