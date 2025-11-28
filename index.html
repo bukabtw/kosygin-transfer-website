@@ -137,15 +137,383 @@
 		        </ul>
 		      </div>
 		    </div>
-		    <div class="map-container">
-			  <iframe 
-			    src="https://yandex.ru/map-widget/v1/?ll=37.637419%2C55.744961&z=16&pt=37.637419%2C55.744961%2Cpm2orgl" 
-			    frameborder="0"
-			    allowfullscreen="true">
-			  </iframe>
-			</div>
-	  </div>
-	</section>
+			    <div class="map-container">
+				  <iframe 
+				    src="https://yandex.ru/map-widget/v1/?ll=37.637419%2C55.744961&z=16&pt=37.637419%2C55.744961%2Cpm2orgl" 
+				    frameborder="0"
+				    allowfullscreen="true">
+				  </iframe>
+				</div>
+	  	   </div>
+		</section>
+
+		<section id="checklist" class="checklist-section">
+		  <h2 class="section-title">Готов ли ты к переводу?</h2>
+		  <div class="checklist-container">
+		    <div class="checklist-card">
+		      <div class="checklist-progress">
+		        <div class="progress-bar">
+		          <div class="progress-fill" id="progressFill"></div>
+		        </div>
+		        <div class="progress-text" id="progressText">Готовность: 0%</div>
+		      </div>
+		      
+		      <div class="checklist-items">
+		        <label class="checklist-item">
+		          <input type="checkbox" class="checklist-checkbox">
+		          <span class="checkmark"></span>
+		          Справка об обучении (текущий месяц)
+		        </label>
+		        
+		        <label class="checklist-item">
+		          <input type="checkbox" class="checklist-checkbox">
+		          <span class="checkmark"></span>
+		          Справка о статусе студента (текущий месяц)
+		        </label>
+		        
+		        <label class="checklist-item">
+		          <input type="checkbox" class="checklist-checkbox">
+		          <span class="checkmark"></span>
+		          Копия паспорта (фото + прописка)
+		        </label>
+		        
+		        <label class="checklist-item">
+		          <input type="checkbox" class="checklist-checkbox">
+		          <span class="checkmark"></span>
+		          Копия СНИЛС
+		        </label>
+		        
+		        <label class="checklist-item">
+		          <input type="checkbox" class="checklist-checkbox">
+		          <span class="checkmark"></span>
+		          Заявление о переводе (заполнено)
+		        </label>
+		        
+		        <label class="checklist-item">
+		          <input type="checkbox" class="checklist-checkbox">
+		          <span class="checkmark"></span>
+		          Согласие на обработку персональных данных
+		        </label>
+		        
+		        <label class="checklist-item">
+		          <input type="checkbox" class="checklist-checkbox">
+		          <span class="checkmark"></span>
+		          Копии лицензии и аккредитации вуза (для негосударственных)
+		        </label>
+		        
+		        <label class="checklist-item">
+		          <input type="checkbox" class="checklist-checkbox">
+		          <span class="checkmark"></span>
+		          Уточнены вакантные места
+		        </label>
+		        
+		        <label class="checklist-item">
+		          <input type="checkbox" class="checklist-checkbox">
+		          <span class="checkmark"></span>
+		          Получена консультация деканата
+		        </label>
+		        
+		        <label class="checklist-item">
+		          <input type="checkbox" class="checklist-checkbox">
+		          <span class="checkmark"></span>
+		          Оценена академическая разница
+		        </label>
+		      </div>
+		      
+		      <div class="checklist-result" id="checklistResult">
+		        Начни отмечать готовые документы!
+		      </div>
+		    </div>
+		  </div>
+		</section>
+		<section id="faq" class="faq-section">
+		  <h2 class="section-title">Частые вопросы</h2>
+		  <div class="faq-container">
+		    
+		    <div class="faq-item">
+		      <div class="faq-question">
+		        <span>Можно ли перевестись на бюджет?</span>
+		        <div class="faq-icon">+</div>
+		      </div>
+		      <div class="faq-answer">
+		        <p>Да, перевод на бюджетные места возможен при наличии вакантных мест. Количество мест ограничено, поэтому рекомендуем уточнять актуальную информацию в деканате.</p>
+		      </div>
+		    </div>
+
+		    <div class="faq-item">
+		      <div class="faq-question">
+		        <span>Что делать, если академическая разница больше 8 дисциплин?</span>
+		        <div class="faq-icon">+</div>
+		      </div>
+		      <div class="faq-answer">
+		        <p>Если разница превышает 8 дисциплин или 30 зачетных единиц, в переводе могут отказать. Рекомендуем заранее оценить разницу и проконсультироваться с деканатом.</p>
+		      </div>
+		    </div>
+
+		    <div class="faq-item">
+		      <div class="faq-question">
+		        <span>Нужно ли сдавать ЕГЭ заново при переводе?</span>
+		        <div class="faq-icon">+</div>
+		      </div>
+		      <div class="faq-answer">
+		        <p>Нет, результаты ЕГЭ действуют 4 года. При переводе в другой вуз пересдавать ЕГЭ не требуется.</p>
+		      </div>
+		    </div>
+
+		    <div class="faq-item">
+		      <div class="faq-question">
+		        <span>Как долго рассматривается заявление о переводе?</span>
+		        <div class="faq-icon">+</div>
+		      </div>
+		      <div class="faq-answer">
+		        <p>Обычно рассмотрение занимает от 10 до 14 рабочих дней. В периоды высокой нагрузки срок может увеличиться.</p>
+		      </div>
+		    </div>
+
+		    <div class="faq-item">
+		      <div class="faq-question">
+		        <span>Можно ли перевестись с заочной на очную форму?</span>
+		        <div class="faq-icon">+</div>
+		      </div>
+		      <div class="faq-answer">
+		        <p>Да, перевод между формами обучения возможен. Однако учитывайте, что может возникнуть дополнительная академическая разница.</p>
+		      </div>
+		    </div>
+
+		    <div class="faq-item">
+		      <div class="faq-question">
+		        <span>Что такое справка текущего месяца и почему она важна?</span>
+		        <div class="faq-icon">+</div>
+		      </div>
+		      <div class="faq-answer">
+		        <p>Справка должна быть датирована текущим месяцем подачи документов. Это подтверждает ваш текущий статус студента и актуальность информации.</p>
+		      </div>
+		    </div>
+
+		    <div class="faq-item">
+		      <div class="faq-question">
+		        <span>Можно ли перевестись в середине семестра?</span>
+		        <div class="faq-icon">+</div>
+		      </div>
+		      <div class="faq-answer">
+		        <p>Да, перевод возможен в течение всего учебного года, но рекомендуем делать это во время каникул или до начала сессии.</p>
+		      </div>
+		    </div>
+
+		    <div class="faq-item">
+		      <div class="faq-question">
+		        <span>Какие документы нужны от негосударственного вуза?</span>
+		        <div class="faq-icon">+</div>
+		      </div>
+		      <div class="faq-answer">
+		        <p>От негосударственных вузов требуются заверенные копии лицензии и свидетельства о государственной аккредитации.</p>
+		      </div>
+		    </div>
+
+		  </div>
+		</section>
+		<section id="calculator" class="calculator-section">
+		  <h2 class="section-title">Калькулятор шансов на перевод</h2>
+		  <div class="calculator-container">
+		    <div class="calculator-card">
+		      <div class="calculator-form">
+		        
+		        <div class="calc-input-group">
+		          <label for="disciplineCount">Количество дисциплин с разницей:</label>
+		          <input type="number" id="disciplineCount" min="0" max="20" value="0">
+		          <div class="calc-hint">Лимит: 8 дисциплин</div>
+		        </div>
+
+		        <div class="calc-input-group">
+		          <label for="creditUnits">Объем разницы в зачетных единицах:</label>
+		          <input type="number" id="creditUnits" min="0" max="50" value="0">
+		          <div class="calc-hint">Лимит: 30 зачетных единиц</div>
+		        </div>
+
+		        <div class="calc-input-group">
+		          <label for="budgetType">Перевод на:</label>
+		          <select id="budgetType">
+		            <option value="budget">Бюджетные места</option>
+		            <option value="contract">Места с оплатой</option>
+		          </select>
+		        </div>
+
+		        <button class="calc-button" onclick="calculateChances()">Рассчитать шансы</button>
+		        
+		      </div>
+
+		      <div class="calculator-result" id="calcResult">
+		        <div class="result-icon">🎯</div>
+		        <h3>Заполните данные для расчета</h3>
+		        <p>Укажите количество дисциплин и объем академической разницы</p>
+		      </div>
+		    </div>
+		  </div>
+		</section>
+		<section id="deadline" class="deadline-section">
+		  <div class="deadline-container">
+		    <div class="deadline-card">
+		      <div class="deadline-icon">⏰</div>
+		      <h2>До конца приёма документов на перевод</h2>
+		      <div class="countdown-timer" id="countdownTimer">
+		        <div class="time-unit">
+		          <span class="time-number" id="days">00</span>
+		          <span class="time-label">дней</span>
+		        </div>
+		        <div class="time-separator">:</div>
+		        <div class="time-unit">
+		          <span class="time-number" id="hours">00</span>
+		          <span class="time-label">часов</span>
+		        </div>
+		        <div class="time-separator">:</div>
+		        <div class="time-unit">
+		          <span class="time-number" id="minutes">00</span>
+		          <span class="time-label">минут</span>
+		        </div>
+		        <div class="time-separator">:</div>
+		        <div class="time-unit">
+		          <span class="time-number" id="seconds">00</span>
+		          <span class="time-label">секунд</span>
+		        </div>
+		      </div>
+		      <p class="deadline-note">Успей подать документы до окончания срока!</p>
+		      <a href="#materials" class="deadline-button">Скачать документы</a>
+		    </div>
+		  </div>
+		</section>
+		<section id="mistakes" class="mistakes-section">
+		  <h2 class="section-title">Частые ошибки, из-за которых отказывают</h2>
+		  <div class="mistakes-container">
+		    
+		    <div class="mistake-card">
+		      <div class="mistake-icon">❌</div>
+		      <div class="mistake-content">
+		        <h3>Просроченные справки</h3>
+		        <p>Справки должны быть датированы текущим месяцем. Справки старше 1 месяца не принимаются.</p>
+		      </div>
+		    </div>
+
+		    <div class="mistake-card">
+		      <div class="mistake-icon">❌</div>
+		      <div class="mistake-content">
+		        <h3>Незаверенные копии</h3>
+		        <p>Копии документов должны быть заверены печатью вуза. Обычные ксерокопии не принимаются.</p>
+		      </div>
+		    </div>
+
+		    <div class="mistake-card">
+		      <div class="mistake-icon">❌</div>
+		      <div class="mistake-content">
+		        <h3>Отсутствие лицензии вуза</h3>
+		        <p>Для негосударственных вузов обязательны копии лицензии и аккредитации.</p>
+		      </div>
+		    </div>
+
+		    <div class="mistake-card">
+		      <div class="mistake-icon">❌</div>
+		      <div class="mistake-content">
+		        <h3>Большая академическая разница</h3>
+		        <p>Разница более 8 дисциплин или 30 зачетных единиц - основная причина отказа.</p>
+		      </div>
+		    </div>
+
+		    <div class="mistake-card">
+		      <div class="mistake-icon">❌</div>
+		      <div class="mistake-content">
+		        <h3>Пропуск сроков подачи</h3>
+		        <p>Документы принимаются только в установленные периоды - проверяйте дедлайны!</p>
+		      </div>
+		    </div>
+
+		    <div class="mistake-card">
+		      <div class="mistake-icon">❌</div>
+		      <div class="mistake-content">
+		        <h3>Неполный пакет документов</h3>
+		        <p>Отсутствие любого из обязательных документов ведет к отказу в рассмотрении.</p>
+		      </div>
+		    </div>
+
+		  </div>
+		  
+		  <div class="mistakes-tip">
+		    <div class="tip-icon">💡</div>
+		    <div class="tip-content">
+		      <h3>Важный совет</h3>
+		      <p>Перед подачей документов обязательно проконсультируйтесь с деканатом и используйте наш чек-лист для проверки готовности!</p>
+		      <a href="#checklist" class="tip-button">Проверить готовность</a>
+		    </div>
+		  </div>
+		</section>
+		<section id="downloads" class="downloads-section">
+		  <h2 class="section-title">Все документы одним архивом</h2>
+		  <div class="downloads-container">
+		    
+		    <div class="downloads-card">
+		      <div class="downloads-icon">📦</div>
+		      <div class="downloads-content">
+		        <h3>Полный пакет документов для перевода</h3>
+		        <p>Скачайте все необходимые бланки, формы и примеры заполнения в одном ZIP-архиве. Экономьте время - не ищите по отдельности!</p>
+		        
+		        <div class="files-list">
+		          <div class="file-item">
+		            <span class="file-icon">📄</span>
+		            <span class="file-name">Бланк заявления о переводе</span>
+		            <span class="file-size">(PDF, 45 КБ)</span>
+		          </div>
+		          <div class="file-item">
+		            <span class="file-icon">📄</span>
+		            <span class="file-name">Согласие на обработку персональных данных</span>
+		            <span class="file-size">(PDF, 38 КБ)</span>
+		          </div>
+		          <div class="file-item">
+		            <span class="file-icon">📄</span>
+		            <span class="file-name">Образец справки об обучении</span>
+		            <span class="file-size">(PDF, 52 КБ)</span>
+		          </div>
+		          <div class="file-item">
+		            <span class="file-icon">📄</span>
+		            <span class="file-name">Пример заполнения заявления</span>
+		            <span class="file-size">(PDF, 68 КБ)</span>
+		          </div>
+		          <div class="file-item">
+		            <span class="file-icon">📄</span>
+		            <span class="file-name">Положение о порядке перевода</span>
+		            <span class="file-size">(PDF, 120 КБ)</span>
+		          </div>
+		          <div class="file-item">
+		            <span class="file-icon">📄</span>
+		            <span class="file-name">Чек-лист документов</span>
+		            <span class="file-size">(PDF, 35 КБ)</span>
+		          </div>
+		        </div>
+		        
+		        <div class="downloads-info">
+		          <div class="info-item">
+		            <span class="info-icon">⚡</span>
+		            <span>Всего 6 документов</span>
+		          </div>
+		          <div class="info-item">
+		            <span class="info-icon">📁</span>
+		            <span>Общий размер: ~400 КБ</span>
+		          </div>
+		          <div class="info-item">
+		            <span class="info-icon">🕒</span>
+		            <span>Актуально на 2025 год</span>
+		          </div>
+		        </div>
+		        
+		        <a href="#" class="download-archive-button" onclick="downloadArchive()">
+		          <span class="button-icon">💾</span>
+		          Скачать ZIP-архив (400 КБ)
+		        </a>
+		        
+		        <div class="downloads-note">
+		          <p>💡 <strong>Совет:</strong> После скачивания распакуйте архив и проверьте все документы по нашему чек-листу</p>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		</section>
 	 </main>
 
 	 <footer class="footer">
@@ -185,11 +553,25 @@
 
 	</body>
 	<script>
+	  function initAnimations() {
+	    animateAllElements();
+	    animateSections();
+	  }
+
 	  function animateAllElements() {
-	    const stepCards = document.querySelectorAll('.step-card');
-	    const materialCards = document.querySelectorAll('.material-card');
-	    const contactItems = document.querySelectorAll('.contact-item');
-	    const mapContainer = document.querySelector('.map-container');
+	    const elementsToAnimate = [
+	      '.step-card',
+	      '.material-card', 
+	      '.contact-item',
+	      '.map-container',
+	      '.checklist-card',
+	      '.faq-item',
+	      '.calculator-card',
+	      '.deadline-card',
+	      '.mistake-card',
+	      '.mistakes-tip',
+	      '.downloads-card'
+	    ];
 	    
 	    const observer = new IntersectionObserver((entries) => {
 	      entries.forEach(entry => {
@@ -199,21 +581,11 @@
 	      });
 	    }, { threshold: 0.3 });
 
-	    stepCards.forEach(card => {
-	      observer.observe(card);
+	    elementsToAnimate.forEach(selector => {
+	      document.querySelectorAll(selector).forEach(element => {
+	        observer.observe(element);
+	      });
 	    });
-
-	    materialCards.forEach(card => {
-	      observer.observe(card);
-	    });
-
-	    contactItems.forEach(item => {
-	      observer.observe(item);
-	    });
-
-	    if (mapContainer) {
-	      observer.observe(mapContainer);
-	    }
 	  }
 
 	  function animateSections() {
@@ -232,6 +604,35 @@
 	      section.style.transform = "translateY(30px)";
 	      section.style.transition = "all 0.6s ease";
 	      observer.observe(section);
+	    });
+	  }
+
+	  function initCopySystem() {
+	    const contacts = [
+	      { selector: 'a[href="mailto:itct@rguk.ru"]', text: 'itct@rguk.ru' },
+	      { selector: 'a[href="mailto:priem@rguk.ru"]', text: 'priem@rguk.ru' },
+	      { selector: 'a[href="tel:+74958110101"]', text: '+7 (495) 811-01-01, доб. 1069' },
+	      { selector: 'a[href="tel:+74959515801"]', text: '+7 (495) 951-58-01' }
+	    ];
+
+	    contacts.forEach(contact => {
+	      const element = document.querySelector(contact.selector);
+	      if (element) {
+	        element.addEventListener('click', (e) => {
+	          e.preventDefault();
+	          copyToClipboard(contact.text);
+	        });
+	      }
+	    });
+
+	    const addressItems = document.querySelectorAll('.contact-details li');
+	    addressItems.forEach(item => {
+	      if (item.textContent.includes('Москва')) {
+	        item.style.cursor = 'pointer';
+	        item.addEventListener('click', () => {
+	          copyToClipboard('Москва, ул. Садовническая, д. 33, стр. 1');
+	        });
+	      }
 	    });
 	  }
 
@@ -275,75 +676,235 @@
 	    }, 3000);
 	  }
 
-	  const style = document.createElement('style');
-	  style.textContent = `
-	    @keyframes slideInRight {
-	      from {
-	        transform: translateX(100%);
-	        opacity: 0;
+	  function initChecklist() {
+	    const checkboxes = document.querySelectorAll('.checklist-checkbox');
+	    const progressFill = document.getElementById('progressFill');
+	    const progressText = document.getElementById('progressText');
+	    const resultText = document.getElementById('checklistResult');
+	    
+	    const messages = [
+	      "Начни отмечать готовые документы!",
+	      "Так держать! Продолжай собирать документы", 
+	      "Уже неплохо! Еще немного усилий",
+	      "Отлично! Ты на верном пути",
+	      "Почти готово! Остались последние штрихи",
+	      "Идеально! Ты полностью готов к переводу! 🎉"
+	    ];
+	    
+	    checkboxes.forEach(checkbox => {
+	      checkbox.addEventListener('change', updateProgress);
+	    });
+	    
+	    function updateProgress() {
+	      const checked = document.querySelectorAll('.checklist-checkbox:checked').length;
+	      const total = checkboxes.length;
+	      const percentage = (checked / total) * 100;
+	      
+	      progressFill.style.width = percentage + '%';
+	      progressText.textContent = `Готовность: ${Math.round(percentage)}%`;
+	      
+	      let messageIndex = Math.floor(percentage / 20);
+	      if (messageIndex >= messages.length) messageIndex = messages.length - 1;
+	      resultText.textContent = messages[messageIndex];
+	      
+	      if (percentage === 100) {
+	        resultText.style.background = '#c6f6d5';
+	        resultText.style.borderLeftColor = '#38a169';
+	      } else {
+	        resultText.style.background = '#f0fff4';
+	        resultText.style.borderLeftColor = '#48bb78';
 	      }
-	      to {
-	        transform: translateX(0);
-	        opacity: 1;
-	      }
+	    }
+
+	    updateProgress();
+	  }
+
+	  function initFAQ() {
+	    const faqItems = document.querySelectorAll('.faq-item');
+	    
+	    faqItems.forEach(item => {
+	      const question = item.querySelector('.faq-question');
+	      
+	      question.addEventListener('click', () => {
+	        faqItems.forEach(otherItem => {
+	          if (otherItem !== item) {
+	            otherItem.classList.remove('active');
+	          }
+	        });
+	        
+	        item.classList.toggle('active');
+	      });
+	    });
+	  }
+
+	  function initCalculator() {
+	    const disciplineInput = document.getElementById('disciplineCount');
+	    const creditInput = document.getElementById('creditUnits');
+	    
+	    disciplineInput.addEventListener('input', function() {
+	      if (this.value > 20) this.value = 20;
+	    });
+	    
+	    creditInput.addEventListener('input', function() {
+	      if (this.value > 50) this.value = 50;
+	    });
+	  }
+
+	  function calculateChances() {
+	    const disciplineCount = parseInt(document.getElementById('disciplineCount').value) || 0;
+	    const creditUnits = parseInt(document.getElementById('creditUnits').value) || 0;
+	    const budgetType = document.getElementById('budgetType').value;
+	    const resultDiv = document.getElementById('calcResult');
+	    
+	    let chancePercentage = 100;
+	    let message = "";
+	    let icon = "🎯";
+	    let resultClass = "high";
+	    
+	    if (disciplineCount > 8) {
+	      chancePercentage -= 40;
+	      message += "❌ Превышен лимит по количеству дисциплин (8)\n";
+	    } else if (disciplineCount > 6) {
+	      chancePercentage -= 20;
+	      message += "⚠️ Близко к лимиту по дисциплинам\n";
 	    }
 	    
-	    @keyframes slideOutRight {
-	      from {
-	        transform: translateX(0);
-	        opacity: 1;
-	      }
-	      to {
-	        transform: translateX(100%);
-	        opacity: 0;
-	      }
+	    if (creditUnits > 30) {
+	      chancePercentage -= 40;
+	      message += "❌ Превышен лимит по зачетным единицам (30)\n";
+	    } else if (creditUnits > 25) {
+	      chancePercentage -= 20;
+	      message += "⚠️ Близко к лимиту по зачетным единицам\n";
 	    }
-	  `;
-	  document.head.appendChild(style);
+	    
+	    if (budgetType === 'budget') {
+	      chancePercentage -= 10;
+	      message += "💰 Перевод на бюджет увеличивает сложность\n";
+	    }
+	    
+	    if (disciplineCount === 0 && creditUnits === 0) {
+	      chancePercentage = 100;
+	      message = "✅ Идеальные условия для перевода!";
+	      icon = "🎉";
+	    } else if (chancePercentage >= 80) {
+	      message = "✅ Высокие шансы на успешный перевод!";
+	      icon = "🚀";
+	    } else if (chancePercentage >= 60) {
+	      message = "⚠️ Хорошие шансы, но есть риски";
+	      icon = "📊";
+	      resultClass = "medium";
+	    } else if (chancePercentage >= 40) {
+	      message = "❌ Низкие шансы, требуется консультация с деканатом";
+	      icon = "🎓";
+	      resultClass = "low";
+	    } else {
+	      message = "❌ Очень низкие шансы, рассмотрите другие варианты";
+	      icon = "💡";
+	      resultClass = "low";
+	    }
+	    
+	    resultDiv.innerHTML = `
+	      <div class="result-icon">${icon}</div>
+	      <h3>Шансы: ${Math.max(0, chancePercentage)}%</h3>
+	      <p>${message}</p>
+	      ${chancePercentage < 80 ? `<div style="margin-top: 15px; font-size: 0.9rem; color: #718096;">Рекомендуем проконсультироваться с деканатом</div>` : ''}
+	    `;
+	    
+	    resultDiv.className = 'calculator-result ' + resultClass;
+	  }
+
+	  function initDeadlineTimer() {
+	    const deadline = new Date('July 1, 2026 23:59:59').getTime();
+
+	    function updateTimer() {
+	      const now = new Date().getTime();
+	      const timeLeft = deadline - now;
+	      
+	      if (timeLeft < 0) {
+	        document.getElementById('countdownTimer').innerHTML = `
+	          <div style="font-size: 1.5rem; font-weight: 600;">
+	            Приём документов завершён
+	          </div>
+	        `;
+	        return;
+	      }
+
+	      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+	      const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+	      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+	      document.getElementById('days').textContent = days.toString().padStart(2, '0');
+	      document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+	      document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+	      document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+	    }
+
+	    updateTimer();
+	    setInterval(updateTimer, 1000);
+	  }
+
+	  function downloadArchive() {
+	    showNotification('💾 Архив документов готовится к скачиванию...');
+	    
+	    setTimeout(() => {
+	      // Сюда ZIP файл
+	      // Для демо создаем имитацию скачивания
+	      
+	      const link = document.createElement('a');
+	      link.href = '#'; // Сюда url к ZIP файлу
+	      link.download = 'documents-rguk-kosygin.zip';
+	      document.body.appendChild(link);
+	      
+	      showNotification('✅ Архив успешно скачан! Проверьте папку "Загрузки"');
+	      
+	      // В реальном проекте раскомментить:
+	      // link.click();
+	      
+	      document.body.removeChild(link);
+	    }, 1500);
+	  }
+
+	  function addAnimationStyles() {
+	    const style = document.createElement('style');
+	    style.textContent = `
+	      @keyframes slideInRight {
+	        from {
+	          transform: translateX(100%);
+	          opacity: 0;
+	        }
+	        to {
+	          transform: translateX(0);
+	          opacity: 1;
+	        }
+	      }
+	      
+	      @keyframes slideOutRight {
+	        from {
+	          transform: translateX(0);
+	          opacity: 1;
+	        }
+	        to {
+	          transform: translateX(100%);
+	          opacity: 0;
+	        }
+	      }
+	    `;
+	    document.head.appendChild(style);
+	  }
 
 	  document.addEventListener('DOMContentLoaded', function() {
-	    animateAllElements();
-	    animateSections();
-	    
-	    const emailElement = document.querySelector('a[href="mailto:itct@rguk.ru"]');
-	    if (emailElement) {
-	      emailElement.addEventListener('click', function(e) {
-	        e.preventDefault();
-	        copyToClipboard('itct@rguk.ru');
-	      });
-	    }
-	    const emailPriemElement = document.querySelector('a[href="mailto:priem@rguk.ru"]');
-	    if (emailPriemElement) {
-	      emailPriemElement.addEventListener('click', function(e) {
-	        e.preventDefault();
-	        copyToClipboard('priem@rguk.ru');
-	      });
-	    }
-	    const phoneElement = document.querySelector('a[href="tel:+74958110101"]');
-	    if (phoneElement) {
-	      phoneElement.addEventListener('click', function(e) {
-	        e.preventDefault();
-	        copyToClipboard('+7 (495) 811-01-01, доб. 1069');
-	      });
-	    }
-	    
-	    const phonePriemElement = document.querySelector('a[href="tel:+74959515801"]');
-	    if (phonePriemElement) {
-	      phonePriemElement.addEventListener('click', function(e) {
-	        e.preventDefault();
-	        copyToClipboard('+7 (495) 951-58-01');
-	      });
-	    }
-	    
-	    const addressItems = document.querySelectorAll('.contact-details li');
-	    addressItems.forEach(item => {
-	      if (item.textContent.includes('Москва')) {
-	        item.style.cursor = 'pointer';
-	        item.addEventListener('click', function() {
-	          copyToClipboard('Москва, ул. Садовническая, д. 33, стр. 1');
-	        });
-	      }
-	    });
+	    addAnimationStyles();
+	    initAnimations();
+	    initCopySystem();
+	    initChecklist();
+	    initFAQ();
+	    initCalculator();
+	    initDeadlineTimer();
 	  });
+
+	  window.copyToClipboard = copyToClipboard;
+	  window.calculateChances = calculateChances;
+	  window.downloadArchive = downloadArchive;
 	</script>
 </html>
