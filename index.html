@@ -14,18 +14,83 @@
 	<body>
 
 		<header class="main-header">
-		  <div class="logo">
-		  	<a href="https://rguk.ru/" target="_blank">
-		    <img src="addons/rguk.svg" alt="РГУ им. Косыгина" />
-			</a>
-		  </div>
-		  <nav class="header-nav">
-		    <ul>
-		      <li><a href="#steps">Этапы</a></li>
-		      <li><a href="#materials">Материалы</a></li>
-		      <li><a href="#contacts">Контакты</a></li>
-		    </ul>
-		  </nav>
+			  <div class="logo">
+			    <a href="https://rguk.ru/" target="_blank">
+			      <img src="addons/rguk.svg" alt="РГУ им. Косыгина" />
+			    </a>
+			  </div>
+			  
+			  <nav class="header-nav">
+			    <ul>
+			      <li class="dropdown">
+			        <a href="#">
+			          <strong>О переводе</strong>
+			          <span class="arrow">&#9660;</span>
+			        </a>
+			        <ul class="dropdown-content">
+			          <li><a href="#steps">Этапы перевода</a></li>
+			          <li><a href="#materials">Материалы</a></li>
+			          <li><a href="#checklist">Чек-лист</a></li>
+			          <li><a href="#calculator">Калькулятор шансов</a></li>
+			        </ul>
+			      </li>
+			      <li class="dropdown">
+			        <a href="#">
+			          <strong>Документы</strong>
+			          <span class="arrow">&#9660;</span>
+			        </a>
+			        <ul class="dropdown-content">
+			          <li><a href="#downloads">Все документы</a></li>
+			          <li><a href="#mistakes">Частые ошибки</a></li>
+			          <li><a href="#deadline">Сроки подачи</a></li>
+			        </ul>
+			      </li>
+			      <li><a href="#contacts"><strong>Контакты</strong></a></li>
+			      <li><a href="#faq"><strong>FAQ</strong></a></li>
+			    </ul>
+			  </nav>
+			  
+			  <button class="burger" id="burger">&#9776;</button>
+			  <button class="close-btn" id="close">
+			    <img src="addons/close.svg" alt="Закрыть">
+			  </button>
+			</header>
+
+			<div class="mobile-menu" id="mobileMenu">
+			  <div class="mobile-header">
+			    <div class="mobile-logo">
+			      <img src="addons/rguk.svg" alt="РГУ им. Косыгина" />
+			    </div>
+			  </div>
+			  
+			  <ul class="mobile-nav">
+			    <li class="dropdown">
+			      <a href="#">
+			        <strong>О переводе</strong>
+			        <span class="arrow">&#9660;</span>
+			      </a>
+			      <ul class="dropdown-content">
+			        <li><a href="#steps">Этапы перевода</a></li>
+			        <li><a href="#materials">Материалы</a></li>
+			        <li><a href="#checklist">Чек-лист</a></li>
+			        <li><a href="#calculator">Калькулятор шансов</a></li>
+			      </ul>
+			    </li>
+			    <li class="dropdown">
+			      <a href="#">
+			        <strong>Документы</strong>
+			        <span class="arrow">&#9660;</span>
+			      </a>
+			      <ul class="dropdown-content">
+			        <li><a href="#downloads">Все документы</a></li>
+			        <li><a href="#mistakes">Частые ошибки</a></li>
+			        <li><a href="#deadline">Сроки подачи</a></li>
+			      </ul>
+			    </li>
+			    <li><a href="#contacts"><strong>Контакты</strong></a></li>
+			    <li><a href="#faq"><strong>FAQ</strong></a></li>
+			  </ul>
+			</div>
 		</header>
 	 <main>
 
@@ -103,48 +168,6 @@
 		      </ul>
 		    </div>
 		  </div>
-		</section>
-		<section id="contacts" class="contacts-section">
-		  <h2 class="section-title">Контакты</h2>
-		  <div class="contacts-container">
-		    <div class="contact-info">
-		      <div class="contact-item">
-		        <h3>Деканат для консультаций</h3>
-		        <ul class="contact-details">
-		          <li>📧 <a href="mailto:itct@rguk.ru" class="contact-link">itct@rguk.ru</a></li>
-		          <li>📞 <a href="tel:+74958110101" class="contact-link">+7 (495) 811-01-01, доб. 1069</a></li>
-		          <li>🕒 Пн-Пт: 9:00-18:00</li>
-		          <li>💬 Консультации по переводу</li>
-		        </ul>
-		      </div>
-		      <div class="contact-item">
-		        <h3>Приемная комиссия</h3>
-		        <ul class="contact-details">
-		          <li>📧 <a href="mailto:priem@rguk.ru" class="contact-link">priem@rguk.ru</a></li>
-		          <li>📞 <a href="tel:+74959515801" class="contact-link">+7 (495) 951-58-01</a></li>
-		          <li>🕒 Пн-Пт: 10:00-17:00</li>
-		          <li>📄 Подача документов</li>
-		        </ul>
-		      </div>
-		      <div class="contact-item">
-		        <h3>Адрес университета</h3>
-		        <ul class="contact-details">
-		          <li style="cursor: pointer;" onclick="copyToClipboard('Москва, ул. Садовническая, д. 33, стр. 1')">
-				  📍 <span class="address-text">Москва, ул. Садовническая, д. 33, стр. 1</span>
-				  </li>
-		          <li>🚇 Метро: Новокузнецкая / Третьяковская</li>
-		          <li>🏛️ Главный учебный корпус</li>
-		        </ul>
-		      </div>
-		    </div>
-			    <div class="map-container">
-				  <iframe 
-				    src="https://yandex.ru/map-widget/v1/?ll=37.637419%2C55.744961&z=16&pt=37.637419%2C55.744961%2Cpm2orgl" 
-				    frameborder="0"
-				    allowfullscreen="true">
-				  </iframe>
-				</div>
-	  	   </div>
 		</section>
 
 		<section id="checklist" class="checklist-section">
@@ -225,6 +248,250 @@
 		      </div>
 		    </div>
 		  </div>
+		</section>
+		<section id="calculator" class="calculator-section">
+		  <h2 class="section-title">Калькулятор шансов на перевод</h2>
+		  <div class="calculator-container">
+		    <div class="calculator-card">
+		      <div class="calculator-form">
+		        
+		        <div class="calc-input-group">
+		          <label for="disciplineCount">Количество дисциплин с разницей:</label>
+		          <input type="number" id="disciplineCount" min="0" max="20" value="0">
+		          <div class="calc-hint">Лимит: 8 дисциплин</div>
+		        </div>
+
+		        <div class="calc-input-group">
+		          <label for="creditUnits">Объем разницы в зачетных единицах:</label>
+		          <input type="number" id="creditUnits" min="0" max="50" value="0">
+		          <div class="calc-hint">Лимит: 30 зачетных единиц</div>
+		        </div>
+
+		        <div class="calc-input-group">
+		          <label for="budgetType">Перевод на:</label>
+		          <select id="budgetType">
+		            <option value="budget">Бюджетные места</option>
+		            <option value="contract">Места с оплатой</option>
+		          </select>
+		        </div>
+
+		        <button class="calc-button" onclick="calculateChances()">Рассчитать шансы</button>
+		        
+		      </div>
+
+		      <div class="calculator-result" id="calcResult">
+		        <div class="result-icon">🎯</div>
+		        <h3>Заполните данные для расчета</h3>
+		        <p>Укажите количество дисциплин и объем академической разницы</p>
+		      </div>
+		    </div>
+		  </div>
+		</section>
+		<section id="downloads" class="downloads-section">
+		  <h2 class="section-title">Все документы одним архивом</h2>
+		  <div class="downloads-container">
+		    
+		    <div class="downloads-card">
+		      <div class="downloads-icon">📦</div>
+		      <div class="downloads-content">
+		        <h3>Полный пакет документов для перевода</h3>
+		        <p>Скачайте все необходимые бланки, формы и примеры заполнения в одном ZIP-архиве. Экономьте время - не ищите по отдельности!</p>
+		        
+		        <div class="files-list">
+		          <div class="file-item">
+		            <span class="file-icon">📄</span>
+		            <span class="file-name">Бланк заявления о переводе</span>
+		            <span class="file-size">(PDF, 45 КБ)</span>
+		          </div>
+		          <div class="file-item">
+		            <span class="file-icon">📄</span>
+		            <span class="file-name">Согласие на обработку персональных данных</span>
+		            <span class="file-size">(PDF, 38 КБ)</span>
+		          </div>
+		          <div class="file-item">
+		            <span class="file-icon">📄</span>
+		            <span class="file-name">Образец справки об обучении</span>
+		            <span class="file-size">(PDF, 52 КБ)</span>
+		          </div>
+		          <div class="file-item">
+		            <span class="file-icon">📄</span>
+		            <span class="file-name">Пример заполнения заявления</span>
+		            <span class="file-size">(PDF, 68 КБ)</span>
+		          </div>
+		          <div class="file-item">
+		            <span class="file-icon">📄</span>
+		            <span class="file-name">Положение о порядке перевода</span>
+		            <span class="file-size">(PDF, 120 КБ)</span>
+		          </div>
+		          <div class="file-item">
+		            <span class="file-icon">📄</span>
+		            <span class="file-name">Чек-лист документов</span>
+		            <span class="file-size">(PDF, 35 КБ)</span>
+		          </div>
+		        </div>
+		        
+		        <div class="downloads-info">
+		          <div class="info-item">
+		            <span class="info-icon">⚡</span>
+		            <span>Всего 6 документов</span>
+		          </div>
+		          <div class="info-item">
+		            <span class="info-icon">📁</span>
+		            <span>Общий размер: ~400 КБ</span>
+		          </div>
+		          <div class="info-item">
+		            <span class="info-icon">🕒</span>
+		            <span>Актуально на 2025 год</span>
+		          </div>
+		        </div>
+		        
+		        <a href="#" class="download-archive-button" onclick="downloadArchive()">
+		          <span class="button-icon">💾</span>
+		          Скачать ZIP-архив (400 КБ)
+		        </a>
+		        
+		        <div class="downloads-note">
+		          <p>💡 <strong>Совет:</strong> После скачивания распакуйте архив и проверьте все документы по нашему чек-листу</p>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		</section>
+		<section id="mistakes" class="mistakes-section">
+		  <h2 class="section-title">Частые ошибки, из-за которых отказывают</h2>
+		  <div class="mistakes-container">
+		    
+		    <div class="mistake-card">
+		      <div class="mistake-icon">❌</div>
+		      <div class="mistake-content">
+		        <h3>Просроченные справки</h3>
+		        <p>Справки должны быть датированы текущим месяцем. Справки старше 1 месяца не принимаются.</p>
+		      </div>
+		    </div>
+
+		    <div class="mistake-card">
+		      <div class="mistake-icon">❌</div>
+		      <div class="mistake-content">
+		        <h3>Незаверенные копии</h3>
+		        <p>Копии документов должны быть заверены печатью вуза. Обычные ксерокопии не принимаются.</p>
+		      </div>
+		    </div>
+
+		    <div class="mistake-card">
+		      <div class="mistake-icon">❌</div>
+		      <div class="mistake-content">
+		        <h3>Отсутствие лицензии вуза</h3>
+		        <p>Для негосударственных вузов обязательны копии лицензии и аккредитации.</p>
+		      </div>
+		    </div>
+
+		    <div class="mistake-card">
+		      <div class="mistake-icon">❌</div>
+		      <div class="mistake-content">
+		        <h3>Большая академическая разница</h3>
+		        <p>Разница более 8 дисциплин или 30 зачетных единиц - основная причина отказа.</p>
+		      </div>
+		    </div>
+
+		    <div class="mistake-card">
+		      <div class="mistake-icon">❌</div>
+		      <div class="mistake-content">
+		        <h3>Пропуск сроков подачи</h3>
+		        <p>Документы принимаются только в установленные периоды - проверяйте дедлайны!</p>
+		      </div>
+		    </div>
+
+		    <div class="mistake-card">
+		      <div class="mistake-icon">❌</div>
+		      <div class="mistake-content">
+		        <h3>Неполный пакет документов</h3>
+		        <p>Отсутствие любого из обязательных документов ведет к отказу в рассмотрении.</p>
+		      </div>
+		    </div>
+
+		  </div>
+		  
+		  <div class="mistakes-tip">
+		    <div class="tip-icon">💡</div>
+		    <div class="tip-content">
+		      <h3>Важный совет</h3>
+		      <p>Перед подачей документов обязательно проконсультируйтесь с деканатом и используйте наш чек-лист для проверки готовности!</p>
+		      <a href="#checklist" class="tip-button">Проверить готовность</a>
+		    </div>
+		  </div>
+		</section>
+		<section id="deadline" class="deadline-section">
+		  <div class="deadline-container">
+		    <div class="deadline-card">
+		      <div class="deadline-icon">⏰</div>
+		      <h2>До конца приёма документов на перевод</h2>
+		      <div class="countdown-timer" id="countdownTimer">
+		        <div class="time-unit">
+		          <span class="time-number" id="days">00</span>
+		          <span class="time-label">дней</span>
+		        </div>
+		        <div class="time-separator">:</div>
+		        <div class="time-unit">
+		          <span class="time-number" id="hours">00</span>
+		          <span class="time-label">часов</span>
+		        </div>
+		        <div class="time-separator">:</div>
+		        <div class="time-unit">
+		          <span class="time-number" id="minutes">00</span>
+		          <span class="time-label">минут</span>
+		        </div>
+		        <div class="time-separator">:</div>
+		        <div class="time-unit">
+		          <span class="time-number" id="seconds">00</span>
+		          <span class="time-label">секунд</span>
+		        </div>
+		      </div>
+		      <p class="deadline-note">Успей подать документы до окончания срока!</p>
+		      <a href="#materials" class="deadline-button">Скачать документы</a>
+		    </div>
+		  </div>
+		</section>
+		<section id="contacts" class="contacts-section">
+		  <h2 class="section-title">Контакты</h2>
+		  <div class="contacts-container">
+		    <div class="contact-info">
+		      <div class="contact-item">
+		        <h3>Деканат для консультаций</h3>
+		        <ul class="contact-details">
+		          <li>📧 <a href="mailto:itct@rguk.ru" class="contact-link">itct@rguk.ru</a></li>
+		          <li>📞 <a href="tel:+74958110101" class="contact-link">+7 (495) 811-01-01, доб. 1069</a></li>
+		          <li>🕒 Пн-Пт: 9:00-18:00</li>
+		          <li>💬 Консультации по переводу</li>
+		        </ul>
+		      </div>
+		      <div class="contact-item">
+		        <h3>Приемная комиссия</h3>
+		        <ul class="contact-details">
+		          <li>📧 <a href="mailto:priem@rguk.ru" class="contact-link">priem@rguk.ru</a></li>
+		          <li>📞 <a href="tel:+74959515801" class="contact-link">+7 (495) 951-58-01</a></li>
+		          <li>🕒 Пн-Пт: 10:00-17:00</li>
+		          <li>📄 Подача документов</li>
+		        </ul>
+		      </div>
+		      <div class="contact-item">
+		        <h3>Адрес университета</h3>
+		        <ul class="contact-details">
+		          <li style="cursor: pointer;" onclick="copyToClipboard('Москва, ул. Садовническая, д. 33, стр. 1')">
+				  📍 <span class="address-text">Москва, ул. Садовническая, д. 33, стр. 1</span>
+				  </li>
+		          <li>🚇 Метро: Новокузнецкая / Третьяковская</li>
+		          <li>🏛️ Главный учебный корпус</li>
+		        </ul>
+		      </div>
+		    </div>
+			    <div class="map-container">
+				  <iframe 
+				    src="https://yandex.ru/map-widget/v1/?ll=37.637419%2C55.744961&z=16&pt=37.637419%2C55.744961%2Cpm2orgl" 
+				    frameborder="0"
+				    allowfullscreen="true">
+				  </iframe>
+				</div>
+	  	   </div>
 		</section>
 		<section id="faq" class="faq-section">
 		  <h2 class="section-title">Частые вопросы</h2>
@@ -310,208 +577,6 @@
 		      </div>
 		    </div>
 
-		  </div>
-		</section>
-		<section id="calculator" class="calculator-section">
-		  <h2 class="section-title">Калькулятор шансов на перевод</h2>
-		  <div class="calculator-container">
-		    <div class="calculator-card">
-		      <div class="calculator-form">
-		        
-		        <div class="calc-input-group">
-		          <label for="disciplineCount">Количество дисциплин с разницей:</label>
-		          <input type="number" id="disciplineCount" min="0" max="20" value="0">
-		          <div class="calc-hint">Лимит: 8 дисциплин</div>
-		        </div>
-
-		        <div class="calc-input-group">
-		          <label for="creditUnits">Объем разницы в зачетных единицах:</label>
-		          <input type="number" id="creditUnits" min="0" max="50" value="0">
-		          <div class="calc-hint">Лимит: 30 зачетных единиц</div>
-		        </div>
-
-		        <div class="calc-input-group">
-		          <label for="budgetType">Перевод на:</label>
-		          <select id="budgetType">
-		            <option value="budget">Бюджетные места</option>
-		            <option value="contract">Места с оплатой</option>
-		          </select>
-		        </div>
-
-		        <button class="calc-button" onclick="calculateChances()">Рассчитать шансы</button>
-		        
-		      </div>
-
-		      <div class="calculator-result" id="calcResult">
-		        <div class="result-icon">🎯</div>
-		        <h3>Заполните данные для расчета</h3>
-		        <p>Укажите количество дисциплин и объем академической разницы</p>
-		      </div>
-		    </div>
-		  </div>
-		</section>
-		<section id="deadline" class="deadline-section">
-		  <div class="deadline-container">
-		    <div class="deadline-card">
-		      <div class="deadline-icon">⏰</div>
-		      <h2>До конца приёма документов на перевод</h2>
-		      <div class="countdown-timer" id="countdownTimer">
-		        <div class="time-unit">
-		          <span class="time-number" id="days">00</span>
-		          <span class="time-label">дней</span>
-		        </div>
-		        <div class="time-separator">:</div>
-		        <div class="time-unit">
-		          <span class="time-number" id="hours">00</span>
-		          <span class="time-label">часов</span>
-		        </div>
-		        <div class="time-separator">:</div>
-		        <div class="time-unit">
-		          <span class="time-number" id="minutes">00</span>
-		          <span class="time-label">минут</span>
-		        </div>
-		        <div class="time-separator">:</div>
-		        <div class="time-unit">
-		          <span class="time-number" id="seconds">00</span>
-		          <span class="time-label">секунд</span>
-		        </div>
-		      </div>
-		      <p class="deadline-note">Успей подать документы до окончания срока!</p>
-		      <a href="#materials" class="deadline-button">Скачать документы</a>
-		    </div>
-		  </div>
-		</section>
-		<section id="mistakes" class="mistakes-section">
-		  <h2 class="section-title">Частые ошибки, из-за которых отказывают</h2>
-		  <div class="mistakes-container">
-		    
-		    <div class="mistake-card">
-		      <div class="mistake-icon">❌</div>
-		      <div class="mistake-content">
-		        <h3>Просроченные справки</h3>
-		        <p>Справки должны быть датированы текущим месяцем. Справки старше 1 месяца не принимаются.</p>
-		      </div>
-		    </div>
-
-		    <div class="mistake-card">
-		      <div class="mistake-icon">❌</div>
-		      <div class="mistake-content">
-		        <h3>Незаверенные копии</h3>
-		        <p>Копии документов должны быть заверены печатью вуза. Обычные ксерокопии не принимаются.</p>
-		      </div>
-		    </div>
-
-		    <div class="mistake-card">
-		      <div class="mistake-icon">❌</div>
-		      <div class="mistake-content">
-		        <h3>Отсутствие лицензии вуза</h3>
-		        <p>Для негосударственных вузов обязательны копии лицензии и аккредитации.</p>
-		      </div>
-		    </div>
-
-		    <div class="mistake-card">
-		      <div class="mistake-icon">❌</div>
-		      <div class="mistake-content">
-		        <h3>Большая академическая разница</h3>
-		        <p>Разница более 8 дисциплин или 30 зачетных единиц - основная причина отказа.</p>
-		      </div>
-		    </div>
-
-		    <div class="mistake-card">
-		      <div class="mistake-icon">❌</div>
-		      <div class="mistake-content">
-		        <h3>Пропуск сроков подачи</h3>
-		        <p>Документы принимаются только в установленные периоды - проверяйте дедлайны!</p>
-		      </div>
-		    </div>
-
-		    <div class="mistake-card">
-		      <div class="mistake-icon">❌</div>
-		      <div class="mistake-content">
-		        <h3>Неполный пакет документов</h3>
-		        <p>Отсутствие любого из обязательных документов ведет к отказу в рассмотрении.</p>
-		      </div>
-		    </div>
-
-		  </div>
-		  
-		  <div class="mistakes-tip">
-		    <div class="tip-icon">💡</div>
-		    <div class="tip-content">
-		      <h3>Важный совет</h3>
-		      <p>Перед подачей документов обязательно проконсультируйтесь с деканатом и используйте наш чек-лист для проверки готовности!</p>
-		      <a href="#checklist" class="tip-button">Проверить готовность</a>
-		    </div>
-		  </div>
-		</section>
-		<section id="downloads" class="downloads-section">
-		  <h2 class="section-title">Все документы одним архивом</h2>
-		  <div class="downloads-container">
-		    
-		    <div class="downloads-card">
-		      <div class="downloads-icon">📦</div>
-		      <div class="downloads-content">
-		        <h3>Полный пакет документов для перевода</h3>
-		        <p>Скачайте все необходимые бланки, формы и примеры заполнения в одном ZIP-архиве. Экономьте время - не ищите по отдельности!</p>
-		        
-		        <div class="files-list">
-		          <div class="file-item">
-		            <span class="file-icon">📄</span>
-		            <span class="file-name">Бланк заявления о переводе</span>
-		            <span class="file-size">(PDF, 45 КБ)</span>
-		          </div>
-		          <div class="file-item">
-		            <span class="file-icon">📄</span>
-		            <span class="file-name">Согласие на обработку персональных данных</span>
-		            <span class="file-size">(PDF, 38 КБ)</span>
-		          </div>
-		          <div class="file-item">
-		            <span class="file-icon">📄</span>
-		            <span class="file-name">Образец справки об обучении</span>
-		            <span class="file-size">(PDF, 52 КБ)</span>
-		          </div>
-		          <div class="file-item">
-		            <span class="file-icon">📄</span>
-		            <span class="file-name">Пример заполнения заявления</span>
-		            <span class="file-size">(PDF, 68 КБ)</span>
-		          </div>
-		          <div class="file-item">
-		            <span class="file-icon">📄</span>
-		            <span class="file-name">Положение о порядке перевода</span>
-		            <span class="file-size">(PDF, 120 КБ)</span>
-		          </div>
-		          <div class="file-item">
-		            <span class="file-icon">📄</span>
-		            <span class="file-name">Чек-лист документов</span>
-		            <span class="file-size">(PDF, 35 КБ)</span>
-		          </div>
-		        </div>
-		        
-		        <div class="downloads-info">
-		          <div class="info-item">
-		            <span class="info-icon">⚡</span>
-		            <span>Всего 6 документов</span>
-		          </div>
-		          <div class="info-item">
-		            <span class="info-icon">📁</span>
-		            <span>Общий размер: ~400 КБ</span>
-		          </div>
-		          <div class="info-item">
-		            <span class="info-icon">🕒</span>
-		            <span>Актуально на 2025 год</span>
-		          </div>
-		        </div>
-		        
-		        <a href="#" class="download-archive-button" onclick="downloadArchive()">
-		          <span class="button-icon">💾</span>
-		          Скачать ZIP-архив (400 КБ)
-		        </a>
-		        
-		        <div class="downloads-note">
-		          <p>💡 <strong>Совет:</strong> После скачивания распакуйте архив и проверьте все документы по нашему чек-листу</p>
-		        </div>
-		      </div>
-		    </div>
 		  </div>
 		</section>
 	 </main>
@@ -607,6 +672,76 @@
 	    });
 	  }
 
+	  function initMobileMenu() {
+	    const burger = document.getElementById('burger');
+	    const closeBtn = document.getElementById('close');
+	    const mobileMenu = document.getElementById('mobileMenu');
+	    const mobileDropdowns = document.querySelectorAll('.mobile-nav .dropdown');
+
+	    if (!burger || !closeBtn || !mobileMenu) {
+	      console.log('Мобильное меню не найдено');
+	      return;
+	    }
+
+	    closeBtn.style.display = 'none';
+
+	    burger.addEventListener('click', () => {
+	      mobileMenu.classList.add('open');
+	      burger.style.display = 'none';
+	      closeBtn.style.display = 'block';
+	      document.body.style.overflow = 'hidden';
+	    });
+
+	    closeBtn.addEventListener('click', () => {
+	      mobileMenu.classList.remove('open');
+	      burger.style.display = 'block';
+	      closeBtn.style.display = 'none';
+	      document.body.style.overflow = '';
+
+	      mobileDropdowns.forEach(dropdown => {
+	        dropdown.classList.remove('active');
+	      });
+	    });
+
+	    mobileDropdowns.forEach(dropdown => {
+	      const link = dropdown.querySelector('a');
+	      
+	      link.addEventListener('click', (e) => {
+	        e.preventDefault();
+	        dropdown.classList.toggle('active');
+
+	        mobileDropdowns.forEach(otherDropdown => {
+	          if (otherDropdown !== dropdown) {
+	            otherDropdown.classList.remove('active');
+	          }
+	        });
+	      });
+	    });
+
+	    const mobileLinks = document.querySelectorAll('.mobile-nav a[href^="#"]');
+	    mobileLinks.forEach(link => {
+	      if (!link.closest('.dropdown') || link.querySelector('.arrow')) {
+	        link.addEventListener('click', () => {
+	          mobileMenu.classList.remove('open');
+	          burger.style.display = 'block';
+	          closeBtn.style.display = 'none';
+	          document.body.style.overflow = '';
+	        });
+	      }
+	    });
+
+	    mobileMenu.addEventListener('click', (e) => {
+	      if (e.target === mobileMenu) {
+	        mobileMenu.classList.remove('open');
+	        burger.style.display = 'block';
+	        closeBtn.style.display = 'none';
+	        document.body.style.overflow = '';
+	      }
+	    });
+
+	    console.log('Мобильное меню инициализировано');
+	  }
+
 	  function initCopySystem() {
 	    const contacts = [
 	      { selector: 'a[href="mailto:itct@rguk.ru"]', text: 'itct@rguk.ru' },
@@ -670,7 +805,7 @@
 	      notification.style.animation = 'slideOutRight 0.3s ease forwards';
 	      setTimeout(() => {
 	        if (notification.parentNode) {
-	          notification.remove();
+	          notification.parentNode.removeChild(notification);
 	        }
 	      }, 300);
 	    }, 3000);
@@ -741,13 +876,17 @@
 	    const disciplineInput = document.getElementById('disciplineCount');
 	    const creditInput = document.getElementById('creditUnits');
 	    
-	    disciplineInput.addEventListener('input', function() {
-	      if (this.value > 20) this.value = 20;
-	    });
+	    if (disciplineInput) {
+	      disciplineInput.addEventListener('input', function() {
+	        if (this.value > 20) this.value = 20;
+	      });
+	    }
 	    
-	    creditInput.addEventListener('input', function() {
-	      if (this.value > 50) this.value = 50;
-	    });
+	    if (creditInput) {
+	      creditInput.addEventListener('input', function() {
+	        if (this.value > 50) this.value = 50;
+	      });
+	    }
 	  }
 
 	  function calculateChances() {
@@ -755,6 +894,8 @@
 	    const creditUnits = parseInt(document.getElementById('creditUnits').value) || 0;
 	    const budgetType = document.getElementById('budgetType').value;
 	    const resultDiv = document.getElementById('calcResult');
+	    
+	    if (!resultDiv) return;
 	    
 	    let chancePercentage = 100;
 	    let message = "";
@@ -814,14 +955,17 @@
 	  }
 
 	  function initDeadlineTimer() {
-	    const deadline = new Date('July 1, 2026 23:59:59').getTime();
+	    const deadline = new Date('February 10, 2026 23:59:59').getTime();
+	    const countdownTimer = document.getElementById('countdownTimer');
+
+	    if (!countdownTimer) return;
 
 	    function updateTimer() {
 	      const now = new Date().getTime();
 	      const timeLeft = deadline - now;
 	      
 	      if (timeLeft < 0) {
-	        document.getElementById('countdownTimer').innerHTML = `
+	        countdownTimer.innerHTML = `
 	          <div style="font-size: 1.5rem; font-weight: 600;">
 	            Приём документов завершён
 	          </div>
@@ -834,10 +978,15 @@
 	      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
 	      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-	      document.getElementById('days').textContent = days.toString().padStart(2, '0');
-	      document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-	      document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-	      document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+	      const daysEl = document.getElementById('days');
+	      const hoursEl = document.getElementById('hours');
+	      const minutesEl = document.getElementById('minutes');
+	      const secondsEl = document.getElementById('seconds');
+
+	      if (daysEl) daysEl.textContent = days.toString().padStart(2, '0');
+	      if (hoursEl) hoursEl.textContent = hours.toString().padStart(2, '0');
+	      if (minutesEl) minutesEl.textContent = minutes.toString().padStart(2, '0');
+	      if (secondsEl) secondsEl.textContent = seconds.toString().padStart(2, '0');
 	    }
 
 	    updateTimer();
@@ -848,9 +997,6 @@
 	    showNotification('💾 Архив документов готовится к скачиванию...');
 	    
 	    setTimeout(() => {
-	      // Сюда ZIP файл
-	      // Для демо создаем имитацию скачивания
-	      
 	      const link = document.createElement('a');
 	      link.href = '#'; // Сюда url к ZIP файлу
 	      link.download = 'documents-rguk-kosygin.zip';
@@ -889,18 +1035,50 @@
 	          opacity: 0;
 	        }
 	      }
+	      
+	      .mobile-menu {
+	        transition: opacity 0.3s ease, transform 0.3s ease;
+	      }
+	      
+	      .mobile-menu.open {
+	        animation: slideInRight 0.3s ease forwards;
+	      }
+	      
+	      .dropdown-content {
+	        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	      }
 	    `;
 	    document.head.appendChild(style);
+	  }
+
+	  function handleResize() {
+	    const mobileMenu = document.getElementById('mobileMenu');
+	    const burger = document.getElementById('burger');
+	    const closeBtn = document.getElementById('close');
+	    
+	    if (window.innerWidth > 1000 && mobileMenu) {
+	      mobileMenu.classList.remove('open');
+	      if (burger) burger.style.display = 'none';
+	      if (closeBtn) closeBtn.style.display = 'none';
+	      document.body.style.overflow = '';
+	    } else if (window.innerWidth <= 1000 && burger) {
+	      burger.style.display = 'block';
+	    }
 	  }
 
 	  document.addEventListener('DOMContentLoaded', function() {
 	    addAnimationStyles();
 	    initAnimations();
+	    initMobileMenu();
 	    initCopySystem();
 	    initChecklist();
 	    initFAQ();
 	    initCalculator();
 	    initDeadlineTimer();
+	    
+	    window.addEventListener('resize', handleResize);
+	    
+	    handleResize();
 	  });
 
 	  window.copyToClipboard = copyToClipboard;
