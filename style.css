@@ -996,7 +996,6 @@ header nav a:hover {
   line-height: 1.6;
 }
 
-/* Активный状态 */
 .faq-item.active .faq-answer {
   max-height: 200px;
 }
@@ -1078,6 +1077,12 @@ header nav a:hover {
   font-weight: 600;
   color: white;
   font-size: 1rem;
+}
+
+.calc-input-group select option {
+  background-color: #2d3748;
+  color: white;
+  padding: 12px;
 }
 
 .calc-input-group input,
@@ -1202,6 +1207,7 @@ header nav a:hover {
     padding: 25px;
   }
 }
+
 
 /*DEADLINE*/
 .deadline-section {
@@ -1403,6 +1409,7 @@ header nav a:hover {
   font-size: 2rem;
   flex-shrink: 0;
   color: #fc8181;
+  margin-top: 20px;
 }
 
 .mistake-content h3 {
@@ -1650,7 +1657,6 @@ header nav a:hover {
   line-height: 1.5;
 }
 
-/* Анимации для архива */
 .downloads-card {
   opacity: 0;
   transform: translateY(30px);
