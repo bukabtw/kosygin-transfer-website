@@ -704,11 +704,12 @@ body.menu-open {
 
 .checklist-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   padding: 15px 0;
   border-bottom: 1px solid #e2e8f0;
   cursor: pointer;
   transition: background-color 0.2s;
+  position: relative;
 }
 
 .checklist-item:hover {
@@ -724,13 +725,17 @@ body.menu-open {
 }
 
 .checkmark {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
   border: 2px solid #cbd5e0;
-  border-radius: 4px;
+  border-radius: 6px;
   margin-right: 15px;
+  margin-top: 2px;
   position: relative;
   transition: all 0.2s;
+  flex-shrink: 0;
 }
 
 .checklist-checkbox:checked + .checkmark {
@@ -742,7 +747,7 @@ body.menu-open {
   content: "✓";
   position: absolute;
   color: white;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
   top: 50%;
   left: 50%;
@@ -758,6 +763,65 @@ body.menu-open {
   font-weight: 600;
   color: #2d3748;
 }
+
+.checklist-item label {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  cursor: pointer;
+}
+
+.checklist-item span:not(.checkmark) {
+  flex: 1;
+  padding-top: 1px;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .checklist-item {
+    padding: 12px 0;
+  }
+  
+  .checkmark {
+    width: 22px;
+    height: 22px;
+    min-width: 22px;
+    min-height: 22px;
+    margin-right: 12px;
+  }
+  
+  .checklist-checkbox:checked + .checkmark::after {
+    font-size: 14px;
+  }
+  
+  .checklist-item span:not(.checkmark) {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .checklist-item {
+    padding: 10px 0;
+  }
+  
+  .checkmark {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    min-height: 20px;
+    margin-right: 10px;
+  }
+  
+  .checklist-checkbox:checked + .checkmark::after {
+    font-size: 12px;
+  }
+  
+  .checklist-item span:not(.checkmark) {
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
+}
+
 
 /*CALCULATOR*/
 .calculator-section {
