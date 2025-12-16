@@ -615,6 +615,94 @@
 
 	</body>
 	<script>
+	  function initMobileMenu() {
+	    const burger = document.getElementById('burger');
+	    const closeBtn = document.getElementById('close');
+	    const mobileMenu = document.getElementById('mobileMenu');
+	    const mobileDropdowns = document.querySelectorAll('.mobile-nav .dropdown');
+	    
+	    if (!burger || !mobileMenu) return;
+	    
+	    let overlay = document.querySelector('.mobile-menu-overlay');
+	    if (!overlay) {
+	      overlay = document.createElement('div');
+	      overlay.className = 'mobile-menu-overlay';
+	      document.body.appendChild(overlay);
+	    }
+	    
+	    function openMobileMenu() {
+	      mobileMenu.classList.add('open');
+	      overlay.classList.add('active');
+	      burger.style.display = 'none';
+	      if (closeBtn) closeBtn.style.display = 'block';
+	      document.body.style.overflow = 'hidden';
+	    }
+	    
+	    function closeMobileMenu() {
+	      mobileMenu.classList.remove('open');
+	      overlay.classList.remove('active');
+	      burger.style.display = 'block';
+	      if (closeBtn) closeBtn.style.display = 'none';
+	      document.body.style.overflow = 'auto';
+	      
+	      mobileDropdowns.forEach(dropdown => {
+	        dropdown.classList.remove('active');
+	      });
+	    }
+	    
+	    burger.addEventListener('click', openMobileMenu);
+	    
+	    if (closeBtn) {
+	      closeBtn.addEventListener('click', closeMobileMenu);
+	    }
+	    
+	    overlay.addEventListener('click', closeMobileMenu);
+	    
+	    document.addEventListener('keydown', (e) => {
+	      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+	        closeMobileMenu();
+	      }
+	    });
+	    
+	    mobileDropdowns.forEach(dropdown => {
+	      const link = dropdown.querySelector('a:first-child');
+	      
+	      link.addEventListener('click', (e) => {
+	        e.preventDefault();
+	        e.stopPropagation();
+	        
+	        dropdown.classList.toggle('active');
+	        
+	        mobileDropdowns.forEach(other => {
+	          if (other !== dropdown) {
+	            other.classList.remove('active');
+	          }
+	        });
+	      });
+	    });
+
+	    const mobileLinks = document.querySelectorAll('.mobile-nav a[href^="#"]');
+	    mobileLinks.forEach(link => {
+	      link.addEventListener('click', (e) => {
+	        const href = link.getAttribute('href');
+	        if (href && href !== '#') {
+	          const targetElement = document.querySelector(href);
+	          
+	          if (targetElement) {
+	            targetElement.scrollIntoView({
+	              behavior: 'smooth',
+	              block: 'start'
+	            });
+	          }
+	        }
+	        
+	        setTimeout(() => {
+	          closeMobileMenu();
+	        }, 300);
+	      });
+	    });
+	  }
+
 	  function initAnimations() {
 	    animateAllElements();
 	    animateSections();
@@ -669,76 +757,6 @@
 	    });
 	  }
 
-	  function initMobileMenu() {
-	    const burger = document.getElementById('burger');
-	    const closeBtn = document.getElementById('close');
-	    const mobileMenu = document.getElementById('mobileMenu');
-	    const mobileDropdowns = document.querySelectorAll('.mobile-nav .dropdown');
-
-	    if (!burger || !closeBtn || !mobileMenu) {
-	      console.log('Мобильное меню не найдено');
-	      return;
-	    }
-
-	    closeBtn.style.display = 'none';
-
-	    burger.addEventListener('click', () => {
-	      mobileMenu.classList.add('open');
-	      burger.style.display = 'none';
-	      closeBtn.style.display = 'block';
-	      document.body.style.overflow = 'hidden';
-	    });
-
-	    closeBtn.addEventListener('click', () => {
-	      mobileMenu.classList.remove('open');
-	      burger.style.display = 'block';
-	      closeBtn.style.display = 'none';
-	      document.body.style.overflow = '';
-
-	      mobileDropdowns.forEach(dropdown => {
-	        dropdown.classList.remove('active');
-	      });
-	    });
-
-	    mobileDropdowns.forEach(dropdown => {
-	      const link = dropdown.querySelector('a');
-	      
-	      link.addEventListener('click', (e) => {
-	        e.preventDefault();
-	        dropdown.classList.toggle('active');
-
-	        mobileDropdowns.forEach(otherDropdown => {
-	          if (otherDropdown !== dropdown) {
-	            otherDropdown.classList.remove('active');
-	          }
-	        });
-	      });
-	    });
-
-	    const mobileLinks = document.querySelectorAll('.mobile-nav a[href^="#"]');
-	    mobileLinks.forEach(link => {
-	      if (!link.closest('.dropdown') || link.querySelector('.arrow')) {
-	        link.addEventListener('click', () => {
-	          mobileMenu.classList.remove('open');
-	          burger.style.display = 'block';
-	          closeBtn.style.display = 'none';
-	          document.body.style.overflow = '';
-	        });
-	      }
-	    });
-
-	    mobileMenu.addEventListener('click', (e) => {
-	      if (e.target === mobileMenu) {
-	        mobileMenu.classList.remove('open');
-	        burger.style.display = 'block';
-	        closeBtn.style.display = 'none';
-	        document.body.style.overflow = '';
-	      }
-	    });
-
-	    console.log('Мобильное меню инициализировано');
-	  }
-
 	  function initCopySystem() {
 	    const contacts = [
 	      { selector: 'a[href="mailto:itct@rguk.ru"]', text: 'itct@rguk.ru' },
@@ -762,7 +780,7 @@
 	      if (item.textContent.includes('Москва')) {
 	        item.style.cursor = 'pointer';
 	        item.addEventListener('click', () => {
-	          copyToClipboard('Москва, ул. Садовническая, д. 33, стр. 1');
+	          copyToClipboard('Москва, ул. Малая Калужская, д. 1');
 	        });
 	      }
 	    });
@@ -1032,18 +1050,6 @@
 	          opacity: 0;
 	        }
 	      }
-	      
-	      .mobile-menu {
-	        transition: opacity 0.3s ease, transform 0.3s ease;
-	      }
-	      
-	      .mobile-menu.open {
-	        animation: slideInRight 0.3s ease forwards;
-	      }
-	      
-	      .dropdown-content {
-	        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-	      }
 	    `;
 	    document.head.appendChild(style);
 	  }
@@ -1052,12 +1058,14 @@
 	    const mobileMenu = document.getElementById('mobileMenu');
 	    const burger = document.getElementById('burger');
 	    const closeBtn = document.getElementById('close');
+	    const overlay = document.querySelector('.mobile-menu-overlay');
 	    
-	    if (window.innerWidth > 1000 && mobileMenu) {
-	      mobileMenu.classList.remove('open');
+	    if (window.innerWidth > 1000) {
+	      if (mobileMenu) mobileMenu.classList.remove('open');
+	      if (overlay) overlay.classList.remove('active');
 	      if (burger) burger.style.display = 'none';
 	      if (closeBtn) closeBtn.style.display = 'none';
-	      document.body.style.overflow = '';
+	      document.body.style.overflow = 'auto';
 	    } else if (window.innerWidth <= 1000 && burger) {
 	      burger.style.display = 'block';
 	    }
@@ -1074,7 +1082,6 @@
 	    initDeadlineTimer();
 	    
 	    window.addEventListener('resize', handleResize);
-	    
 	    handleResize();
 	  });
 
