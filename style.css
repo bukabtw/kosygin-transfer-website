@@ -1444,7 +1444,7 @@ body.menu-open {
 .review-form textarea,
 .review-form select {
   background: var(--secondary-color);
-  color: var(--text-dark);
+  color: #1a202c !important; 
   border-color: var(--border-color);
 }
 
