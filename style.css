@@ -2170,7 +2170,7 @@ body.menu-open {
 .form-group textarea {
   width: 100%;
   padding: 15px;
-  border: 2px solid #e2e8f0;
+  border: 2px solid #e2e8f0 !important;
   border-radius: var(--radius-md);
   background: rgba(255, 255, 255, 0.1);
   color: var(--secondary-color);
