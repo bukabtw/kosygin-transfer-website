@@ -2300,6 +2300,98 @@ body.menu-open {
   font-size: 0.9rem;
 }
 
+.author-gradient {
+    background: linear-gradient(90deg, 
+        var(--primary-color) 0%, 
+        #ffffff 50%, 
+        var(--primary-color) 100%);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 5px 0;
+    animation: gradientFlow 3s ease-in-out infinite;
+}
+
+@keyframes gradientFlow {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.author-gradient:hover {
+    animation-play-state: paused;
+    background: linear-gradient(90deg, 
+        var(--accent-blue) 0%, 
+        #90cdf4 50%, 
+        var(--accent-blue) 100%);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: translateY(-2px);
+}
+
+.author-gradient::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        var(--primary-color) 0%, 
+        #ffffff 50%, 
+        var(--primary-color) 100%);
+    background-size: 200% 100%;
+    transition: width 0.3s ease;
+    animation: gradientFlow 3s ease-in-out infinite;
+}
+
+.author-gradient:hover::after {
+    width: 100%;
+    background: linear-gradient(90deg, 
+        var(--accent-blue) 0%, 
+        #90cdf4 50%, 
+        var(--accent-blue) 100%);
+    background-size: 200% 100%;
+    animation-play-state: paused;
+}
+
+.footer-author {
+    text-align: center;
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-author {
+    animation: gentlePulse 8s ease-in-out infinite;
+}
+
+@keyframes gentlePulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.9;
+    }
+}
 
 @media (min-width: 1201px) {
   .section-padding-large {
